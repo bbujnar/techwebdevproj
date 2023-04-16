@@ -1,6 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-fontcolor: black; 
+    --whitebg: white;
+}
+
+* {
+    font-family: 'Roboto', sans-serif; 
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 5%;
+    position: fixed;
+    top: 0;
+    font-family: 'Roboto', sans-serif; 
+    width: 100%;
+    background-color: var(--whitebg);
+}
+
+header a{
+    text-decoration: none;
+    color: var(--primary-fontcolor);
+}
+
+header nav ul{
+    display: flex;
+}
 
 
+.mainpage{
+    background-image: url("../img/mainbackground.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+
+.skills {
+    background-image: url(../img/skillsbackground.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 
