@@ -2,7 +2,10 @@
 
 :root {
     --primary-fontcolor: black; 
-    --whitebg: white;
+    --white: white;
+    --cyan: rgba(16,201,195,255);
+    --grey-font: rgba(138,142,143,255);
+    --skillsbg: rgba(240,240,249,255);
 }
 
 * {
@@ -10,25 +13,69 @@
     scroll-behavior: smooth;
 }
 
+body{
+    width: 100%;
+    font-family: 'Roboto', sans-serif; 
+}
+
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 5%;
+    padding-top: 40px;
+    padding-bottom: 40px;
     position: fixed;
     top: 0;
     font-family: 'Roboto', sans-serif; 
     width: 100%;
-    background-color: var(--whitebg);
+    background-color: var(--white);
+    font-size: 14px;
+    z-index: 2;
 }
+
+button{
+    margin-top: 20px;
+    border: 0;
+    background-color: var(--cyan);
+    color: var(--white);
+    padding: 20px 40px;
+}
+
+h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 
 header a{
     text-decoration: none;
     color: var(--primary-fontcolor);
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: var(--cyan);
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 header nav ul{
     display: flex;
+    justify-content: right;
+    width: 60%;
+}
+
+header nav li{
+    margin-right: 8%;
+}
+
+header img{
+    position: absolute;
+    left: 5%;
 }
 
 
@@ -37,16 +84,154 @@ header nav ul{
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
+.mainpage .content{
+    width: 35%;
+}
+
+.mainpage .content p{
+    line-height: 25px;
+    width: 70%;
+    color: var(--grey-font);
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+#about p{
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+#work{
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+#work .content{
+    padding-left: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
 
 .skills {
-    background-image: url(../img/skillsbackground.png);
+    background-color: var(--skillsbg);
     height: 100vh;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
+.skills .skillbargray{
+    width: 70%;
+    height: 3px;
+    background-color: var(--grey-font);
+    padding: 0;
+    display: flex;
+    justify-content: start;
+}
+
+.skills .uxskill{
+    width: 75%;
+    height: 3px;
+    background-color: var(--cyan);
+}
+
+.skills .webdevskill{
+    width: 90%;
+    height: 3px;
+    background-color: var(--cyan);
+}
+
+.skills .marketingskill{
+    width: 65%;
+    height: 3px;
+    background-color: var(--cyan);
+}
+
+.skills div p {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.experience{
+    background-color: var(--cyan);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+}
+
+.experience-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experience-container img{
+    margin-right: 14px;
+}
+
+.experience p{
+    color: var(--white);
+    line-height: 25px;
+}
+
+.gallery{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery > div{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    background-color: white;
+    position: relative;
+}
+
+.greyscreen img{
+    width: 20%;
+}
+
+.greyscreen{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    opacity: 0;
+    transition: .2s ease all;
+    background-color: black;
+    z-index: 1;
+}
+
+.greyscreen:hover{
+    -webkit-filter: brightness(100%);
+    opacity: .8;
+}
 
 
 
