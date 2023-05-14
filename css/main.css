@@ -6,6 +6,7 @@
     --cyan: rgba(16,201,195,255);
     --grey-font: rgba(138,142,143,255);
     --skillsbg: rgba(240,240,249,255);
+    --greybg: #F1F3F3;
 }
 
 * {
@@ -91,6 +92,10 @@ header img{
 
 .mainpage .content{
     width: 35%;
+}
+
+p{
+    line-height: 25px;
 }
 
 .mainpage .content p{
@@ -233,9 +238,78 @@ header img{
     opacity: .8;
 }
 
+.galleryexpand{
+    background-color: var(--greybg);
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grey-font);
+    font-size: 14px;
+}
+
+.videobox {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
 
+.videobox p {
+    text-align: center;
+    color: var(--grey-font);
+}
 
+.video {
+    margin-top: 20px;
+}
+
+.devskills {
+    width: 100%;
+    padding: 5vh 0;
+    background-color: var(--greybg);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.devskills > div {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.devskills > div p{
+    width: 50%;
+    text-align: center;
+    font-size: 12px;
+    color: var(--grey-font);
+}
+
+
+.devskills img {
+    margin: 20px 0;
+}
+
+
+.devskills h3{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.partners {
+    width: 100%;
+    padding: 5vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
 /* Mobile */
 @media screen and (max-width : 1024px) {
