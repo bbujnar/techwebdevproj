@@ -234,7 +234,7 @@ p{
 }
 
 .greyscreen:hover{
-    -webkit-filter: brightness(100%);
+    --webkit-filter: brightness(100%);
     opacity: .8;
 }
 
