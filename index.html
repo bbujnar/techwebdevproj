@@ -12,16 +12,24 @@
 <body>
     <header>
         <img src="./img/logo.png" alt="logo">
-        <nav class="menu">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#work">WORK</a></li>
-                <li><a href="#process">PROCESS</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#testimonials">TESTIMONIALS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
+        <nav class="menu inactive navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#work">WORK</a></li>
+                    <li><a href="#process">PROCESS</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#testimonials">TESTIMONIALS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -29,7 +37,7 @@
             <div class="content">
                 <h2>We Design and Develop</h2>
                 <p>We are a new design studio based in USA. We have over 20 years of combined experience, and know a thing or two about designing websites and mobile apps.</p>
-                <button id="contact">CONTACT US</button>
+                <button id="contactbutton">CONTACT US</button>
             </div>
         </section>
 
@@ -165,7 +173,15 @@
         </section>
 
         <section class="slider">
-
+            <h3>
+                "Outstanding job and exceeded all expectations. It was a pleasure to work with them on a sizable first procject and am looking forward to start the next one asap."
+            </h3>
+            <p>MICHAEL HOPKINS</p>
+            <div class="sliderdots">
+                <div class="dot"></div>
+                <div class="dot activedot"></div>
+                <div class="dot"></div>
+            </div>
         </section>
 
         <section id="testimonials" class="partners">
@@ -181,10 +197,12 @@
             <p>Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful</p>
 
             <form>
-                <input type="text" placeholder="Your Name">
-                <input type="text" placeholder="Your Email">
-                <input type="text" placeholder="Your Title">
-                <textarea name="comment" id="com" placeholder="Your Comment"></textarea>
+                <div>
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Your Email">
+                </div>
+                <input type="text" placeholder="Your Title" class="full">
+                <textarea name="comment" class="full" id="com" placeholder="Your Comment"></textarea>
                 <button class="form-submit">SEND MESSAGE</button>
             </form> 
         </section>

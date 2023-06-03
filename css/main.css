@@ -7,13 +7,20 @@
     --grey-font: rgba(138,142,143,255);
     --skillsbg: rgba(240,240,249,255);
     --greybg: #F1F3F3;
+    --night: #141414;
 }
 
-* {
+*,
+*::after,
+*::before{
     font-family: 'Roboto', sans-serif; 
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
+
+
+/* DESKTOP */
 body{
     width: 100%;
     font-family: 'Roboto', sans-serif; 
@@ -30,6 +37,12 @@ header {
     font-size: 14px;
     z-index: 2;
 }
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
 
 button{
     margin-top: 20px;
@@ -311,7 +324,447 @@ p{
     justify-content: space-around;
 }
 
+
+.slider{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--cyan);
+    color: white;
+    position: relative;
+}
+
+.sliderdots{
+    position: absolute;
+    bottom: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dot{
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    background-color: var(--white);
+    opacity: .6;
+    border-radius: 100%;
+    transition: all .2s ease-in-out;
+}
+
+.slider .dot:hover{
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.activedot{
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+}
+
+.slider h3{
+    font-family: 'Roboto', sans-serif; 
+    width: 60%;
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 25px;
+    padding-bottom: 10px;
+}
+
+.slider p{
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+.contact-form{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--greybg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-form p{
+    width: 40%;
+    text-align: center;
+    font-size: 16px;
+    color: var(--grey-font);
+}
+
+.contact-form form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    overflow: hidden;
+    height: 50%;
+}
+
+.full{
+    width: 100%;
+    padding: 0;
+}
+
+.contact-form form div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form form div input{
+    width: 48%;
+}
+
+.contact-form input,
+.contact-form textarea{
+    border: 0;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+.contact-form textarea{
+    height: 50%;
+    resize: none;
+}
+
+
+footer{
+    box-sizing: border-box;
+    padding-top: 50px;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: var(--night);
+    color: var(--white);
+}
+
+.corp-info,
+.corp-contact{
+    width: 20%;
+}
+
+.footer-links{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+footer h2{
+    font-size: 16px;
+}
+
+footer p,
+footer li,
+footer a{
+    font-size: 14px;
+}
+
+footer li{
+    line-height: 20px;
+}
+
 /* Mobile */
 @media screen and (max-width : 1024px) {
+    .mainpage{
+        justify-content: center;
+    }
+
+    .mainpage .content{
+        width: 80%;
+    }
+
+    .mainpage .content p{
+        color: var(--night);
+    }
+
+    #work .content{
+        background-image: url(../img/skillsbackground.png);
+        background-size: cover;
+        width: 100%;
+    }
+
+    .skills img{
+        display: none;
+    }
+
+    .experience{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .experience-container{
+        width: 40%;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    .experience-container img {
+        margin-right: 0;
+    }
+
+    .gallery{
+        height: auto;
+    }
+
+    .gallery > div {
+        width: 50%;
+        box-shadow: inset 0 0 50px 1px var(--grey-font);
+    }
+
+    .devskills > div{
+        width: 50%;
+    }
+
+    header nav ul{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width : 768px) {
+
+    header{
+        padding: 0;
+        position: sticky;
+    }
+
+    header img{
+        right: 5%;
+        top: 20px;
+        left: auto;
+    }
+
+    header nav{
+        justify-content: flex-start;
+    }
+
     
+
+    .navbar {
+        opacity: 0.95;
+      }
+    
+      .navbar-container input[type="checkbox"],
+      .navbar-container .hamburger-lines {
+        display: block;
+      }
+    
+      .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+        width: 70%;
+      }
+    
+      .navbar-container input[type="checkbox"] {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 30px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+      }
+    
+      .navbar-container .hamburger-lines {
+        display: block;
+        height: 23px;
+        width: 35px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    
+      .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #333;
+      }
+    
+      .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+    
+      .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar .menu-items {
+        padding-top: 100px;
+        background: var(--white);
+        height: 200vh;
+        width: 100%;
+        transform: translate(-200%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+      }
+    
+      .navbar .menu-items li {
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(35deg);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+      }
+
+      .videobox{
+        height: 50vh;
+      }
+
+      .partners{
+        flex-wrap: wrap;
+      }
+
+      .partners div{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .partners div img{
+        width: 50%;
+      }
+    
+      .contact-form p,
+      .contact-form form{
+        width: 90%;
+      }
+
+      footer{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: auto;
+        padding: 20px 0;
+        padding-left: 5%;
+      }
+      
+      .corp-info, .corp-contact{
+        width: 50%;
+        margin-bottom: 20px;
+      }
+
+      .footer-links{
+        width: 80%;
+      }
+
+}
+
+
+@media screen and (max-width : 500px) {
+
+
+    .mainpage{
+        height: auto;
+        padding: 20px;
+    }
+
+    .navbar-container{
+        width: 90%;
+    }
+
+    .mainpage .content p{
+        width: 85%;
+        font-weight: bold;
+    }
+
+    .skills .skillbargray{
+        width: 80%;
+    }
+
+    .experience-container{
+        width: 90%;
+    }
+
+    .gallery > div{
+        width: 100%;
+    }
+
+    .videobox h2{
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .videobox{
+        height: 60vh;
+    }
+
+    .videobox p{
+        width: 70%;
+    }
+
+    .video{
+        margin-bottom: 10px;
+    }
+
+    .devskills > div{
+        width: 100%;
+    }
+
+    .slider h3{
+        width: 90%;
+    }
+
+    .partners div{
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .contact-form form div{
+        flex-direction: column;
+    }
+
+    .contact-form form div input{
+        width: 100%;
+    }
 }
