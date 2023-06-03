@@ -6,7 +6,3 @@ links.forEach((link) => {
     checkbox.checked = false;
   });
 });
-
-let button = document.getElementById("contactbutton");
-
-button.addEventListener("click", () => {});
